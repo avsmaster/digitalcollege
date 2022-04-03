@@ -1,0 +1,515 @@
+{% extends 'base.html' %} <!-- template inheritance -->
+
+{% block content %}
+{% load static %}
+
+<!--====== HEADER ONE PART START ======-->
+
+<header class="header-area">
+
+    <div class="navbar-area navbar-one navbar-transparent">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="#">
+                         <h2 style="color: white">The digital college</h2>
+                     </a>
+
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarOne" aria-controls="navbarOne" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="toggler-icon"></span>
+                        <span class="toggler-icon"></span>
+                        <span class="toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse sub-menu-bar" id="navbarOne">
+                        <ul class="navbar-nav m-auto">
+                            
+                            <li class="nav-item">
+                                <a class="page-scroll" href="#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="page-scroll" href="#portfolio">Develop</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="page-scroll" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="navbar-btn d-none d-sm-inline-block">
+                        <ul>
+                            <li><a class="light" data-toggle="modal" data-target="#loginModel">Login</a></li>
+                        </ul>
+                    </div>
+                </nav> <!-- navbar -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</div>
+
+<div id="home" class="header-content-area d-flex align-items-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="header-wrapper">
+                    <div class="header-content">
+                        <h3 class="header-title">Welcome To thedigitalcollege</h3>
+                        <p class="text">Register and get started with complete digital college exprience.</p>
+                        <div class="header-btn rounded-buttons">
+                            <a class="main-btn rounded-one" href="signup">Sign Up</a>
+                        </div>
+                        
+                    </div> <!-- header content -->
+                    
+                    <!-- Login model bootstrap model -->
+
+                    <div class="modal fade" id="loginModel" tabindex="-1" role="dialog"  aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" >Please enter your login credentials</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                          </button>
+                      </div>
+                      <form action="/login" method="post">
+
+                          <div class="modal-body">
+                             
+                              <div class="form-group">
+                               <label for="user-email" class="col-form-label">Email </label><br>
+                               {{ login_form.email}}
+                           </div>
+                           <div class="form-group">
+                             <label for="user-password" class="col-form-label">Password </label><br>
+                             {{ login_form.password}}
+                         </div>
+                         
+                     </div>
+                     <div class="modal-footer">
+                       <button type="submit" class="btn btn-primary">Login</button>
+                   </div>
+                   {% csrf_token %}
+               </form>
+           </div>
+       </div>
+   </div>
+   <!-- end of bootstrap model login model-->
+   <div class="header-image d-none d-lg-block">
+    <div class="image" style="float: right;">
+        <img src="{%static 'assets/images/header.png' %}" alt="Header"> 
+    </div>
+</div>
+
+</div>
+</div>
+</div> <!-- row -->
+</div> <!-- container -->
+<div class="header-shape">
+    <img src="{%static 'assets/images/header-shape.svg' %}" alt="shape">
+</div> <!-- header-shape -->
+</div> <!-- header content area -->
+</header>
+
+<!--====== HEADER ONE PART ENDS ======-->
+
+<!--====== FEATRES PART START ======-->
+
+<section id="features" class="features-area pt-60 pb-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-7 col-sm-9">
+                <div class="single-features text-center mt-40">
+                    <div class="features-icon">
+                        <i class="lni-school-compass"></i>
+                        <img class="shape" src="{%static 'assets/images/f-shape-1.svg' %}" alt="Shape">
+                    </div>
+                    <div class="features-content">
+                        <h4 class="features-title"><a href="#">Classes</a></h4>
+                        <p class="text">Interactive sessions as carried in physical colleges </p>
+                        <div class="features-btn rounded-buttons">
+                            <a class="main-btn rounded-one" href="#">KNOW MORE</a>
+                        </div>
+                    </div>
+                </div> <!-- single features -->
+            </div>
+            <div class="col-lg-4 col-md-7 col-sm-9">
+                <div class="single-features text-center mt-40">
+                    <div class="features-icon">
+                        <i class="lni-construction"></i>
+                        <img class="shape" src="{%static 'assets/images/f-shape-1.svg' %}" alt="Shape">
+                    </div>
+                    <div class="features-content">
+                        <h4 class="features-title"><a href="#">Library</a></h4>
+                        <p class="text">where all the reference material, recorded session resides.</p>
+                        <div class="features-btn rounded-buttons">
+                            <a class="main-btn rounded-one" href="#">KNOW MORE</a>
+                        </div>
+                    </div>
+                </div> <!-- single features -->
+            </div>
+            <div class="col-lg-4 col-md-7 col-sm-9">
+                <div class="single-features text-center mt-40">
+                    <div class="features-icon">
+                        <i class="lni-cup"></i>
+                        <img class="shape" src="{%static 'assets/images/f-shape-1.svg' %}" alt="Shape">
+                    </div>
+                    <div class="features-content">
+                        <h4 class="features-title"><a href="#">Student Life</a></h4>
+                        <p class="text">where student can collaborate, achieve, engage and maintain their social life</p>
+                        <div class="features-btn rounded-buttons">
+                            <a class="main-btn rounded-one" href="#">KNOW MORE</a>
+                        </div>
+                    </div>
+                </div> <!-- single features -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</section>
+
+<!--====== FEATRES PART ENDS ======-->
+
+<!--====== ABOUT THREE PART START ======-->
+
+<section id="about" class="about-area pt-70 pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="about-feature mt-30">
+                    <div class="about-feature-image">
+                        <img src="{%static 'assets/images/about.png' %}" alt="feature">
+                    </div>
+                    <div class="about-feature-content">
+                        <h2 class="feature-title">The future of digital college environment starts here</h2>
+                        <p class="text">An open platform for synchronous and asynchronous online learning. Sign up to get your college online</p>
+                    </div>
+                </div> <!-- about feature three -->
+            </div>
+            <div class="col-lg-6">
+                <div class="about-feature-items d-sm-flex mt-30">
+                    <div class="feature-items-icon">
+                        <img src="{%static 'assets/images/feature-icon-1.png' %}" alt="Icon">
+                    </div>
+                    <div class="feature-items-content media-body">
+                        <h5 class="items-title">Decentralized Collaboration</h5>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. </p>
+                    </div>
+                </div> <!-- about feature items -->
+                <div class="about-feature-items d-sm-flex mt-30">
+                    <div class="feature-items-icon">
+                        <img src="{%static 'assets/images/feature-icon-2.png' %}" alt="Icon">
+                    </div>
+                    <div class="feature-items-content media-body">
+                        <h5 class="items-title">Realtime Experience</h5>
+                        <p class="text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. 
+
+                        </p>
+                    </div>
+                </div>
+                <!-- about feature items -->
+                <div class="about-feature-items d-sm-flex mt-30">
+                    <div class="feature-items-icon">
+                        <img src="{%static 'assets/images/feature-icon-3.png' %}" alt="Icon">
+                    </div>
+                    <div class="feature-items-content media-body">
+                        <h5 class="items-title">Study from Anywhere</h5>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. </p>
+                    </div>
+                </div> 
+                <!-- about feature items -->
+                <div class="about-feature-items d-sm-flex mt-30">
+                    <div class="feature-items-icon">
+                        <img src="{%static 'assets/images/feature-icon-4.png' %}" alt="Icon">
+                    </div>
+                    <div class="feature-items-content media-body">
+                        <h5 class="items-title">Analyse and Evaluate progress</h5>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. </p>
+                    </div>
+                </div> <!-- about feature items -->
+
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</section>
+
+<!--====== ABOUT THREE PART ENDS ======-->
+
+<!--====== Develop PART START ======-->
+
+<section id="portfolio" class="portfolio-area pt-95 pb-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="text-center">
+                <h2>In thedigitalcollege you can develop your own component as your college environment</h2></br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. </p></br>
+                <div class="rounded-buttons">
+                    <a class="main-btn rounded-one" rel="nofollow" href="#">Learn more</a>
+                </div>
+                
+            </div> <!-- header content -->
+        </div> <!-- row -->
+        
+    </div> <!-- container -->
+</section>
+
+<!--====== Develop PART ENDS ======-->
+
+<!--====== TESTIMONIAL PART START ======-->
+
+<section class="testimonial-area pt-95 pb-100" style="background-color: #ffffff">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="section-title text-center pb-20">
+                    <h4 class="title">Testimonial</h4>
+                    <p class="text"></p>
+                </div> <!-- section title -->
+            </div>
+        </div> <!-- row -->
+        
+        <div class="row testimonial-active">
+            <div class="col-lg-6">
+                <div class="single-testimonial mt-30">
+                    <div class="testimonial-author d-sm-flex align-items-center">
+                        <div class="author-image">
+                            <img src="{%static 'assets/images/author-2.jpg' %}" alt="Author">
+                        </div>
+                        <div class="author-name media-body">
+                            <h6 class="name">Riley Beata</h6>
+                            <span class="sub-title">BBA </span>
+                        </div>
+                    </div>
+                    <div class="testimonial-text">
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. </p>
+                    </div>
+                </div> <!-- single testimonial -->
+            </div>
+            <div class="col-lg-6">
+                <div class="single-testimonial mt-30">
+                    <div class="testimonial-author d-sm-flex align-items-center">
+                        <div class="author-image">
+                            <img src="{%static 'assets/images/author-2.jpg' %}" alt="Author">
+                        </div>
+                        <div class="author-name media-body">
+                            <h6 class="name">Fajar Siddiq</h6>
+                            <span class="sub-title">BIT</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-text">
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. </p>
+                    </div>
+                </div> <!-- single testimonial -->
+            </div>
+            <div class="col-lg-6">
+                <div class="single-testimonial mt-30">
+                    <div class="testimonial-author d-sm-flex align-items-center">
+                        <div class="author-image">
+                            <img src="{%static 'assets/images/author-3.jpg' %}" alt="Author">
+                        </div>
+                        <div class="author-name media-body">
+                            <h6 class="name">Kamil Kiwis</h6>
+                            <span class="sub-title">BSC</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-text">
+                        <p class="text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. 
+                        </p>
+                    </div>
+                </div> <!-- single testimonial -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</section>
+
+<!--====== TESTIMONIAL PART ENDS ======-->
+
+<!--====== CONTACT PART START ======-->
+
+<section id="contact" class="contact-area pt-95 pb-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="section-title text-center pb-20">
+                    <h4 class="title">Get in touch</h4>
+                    <p class="text"></p>
+                </div> <!-- section title -->
+            </div>
+        </div> <!-- row -->
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="contact mt-30">
+                    <h4 class="contact-title">We love to hear from you or have any suggestion? lets talk.</h4>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam unde repellendus delectus facilis quia consequatur maxime perferendis! Sequi, modi consequatur. <br> <br></p>
+                    <ul class="contact-info">
+                        <li><i class="lni-money-location"></i>Kathmandu, Nepal</li>
+                        <li><i class="lni-phone-handset"></i> +977-01-8212918</li>
+                        <li><i class="lni-envelope"></i> info.support@thedigitalcollege.org</li>
+                    </ul>
+                </div> <!-- contact -->
+            </div>
+            <div class="col-lg-6">
+                <div class="contact-form form-style-one mt-15">
+                    <!-- submission  -->
+                    {% if submitted %}
+                    <script type="text/javascript">
+                        alert("Thanks for your response")
+                    </script>
+                    {% endif%}
+
+                    <form id="contact-form" action="" method="post">
+                        {{ form.non_field_errors }}
+                        <div class="form-input mt-15">
+                           {{ form.name.errors}}
+                           <label>Name</label>
+                           <div class="input-items default">
+                            {{ form.name}}
+                            <i class="lni-user"></i>
+                        </div>
+                    </div> <!-- form input -->
+                    <div class="form-input mt-15">
+                      {{ form.email.errors}}
+                      <label>Email</label>
+                      <div class="input-items default">
+                        {{ form.email}}
+                        <i class="lni-envelope"></i>
+                    </div>
+                </div> <!-- form input -->
+                <div class="form-input mt-15">
+                  {{ form.subject.errors}}
+                  <label>Subject</label>
+                  <div class="input-items default">
+                     {{ form.subject}}
+                     <i class="lni-book"></i>
+                 </div>
+             </div> <!-- form input -->
+             <div class="form-input mt-15">
+              {{ form.message.errors}}
+              <label>Massage</label>
+              <div class="input-items default">
+                {{ form.message}}
+                <i class="lni-pencil-alt"></i>
+            </div>
+        </div> <!-- form input -->
+        <p class="form-message"></p>
+        <div class="form-input standard-buttons mt-20">
+            <button class="main-btn standard-two" type="submit">Submit</button>
+        </div> <!-- form input -->
+        {% csrf_token %}
+    </form>
+</div> <!-- contact form -->
+</div>
+</div> <!-- row -->
+</div> <!-- container -->
+</section>
+
+<!--====== CONTACT PART ENDS ======-->
+
+<!--====== FOOTER PART START ======-->
+
+<footer id="footer" class="footer-area">
+    <div class="footer-widget pt-10 pb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-logo-support d-md-flex align-items-end justify-content-between">
+                        <div class="footer-logo d-flex align-items-end pt-30">
+                            <a href="index.html"><img src="{%static 'assets/images/footer-logo.svg' %}" alt="Logo"></a>
+                        </div> <!-- footer logo -->
+                    </div> <!-- footer logo support -->
+                </div>
+            </div> <!-- row -->
+            <div class="row">
+                <div class="col-xl-6 col-lg-4 col-sm-12">
+                    <div class="footer-support ">
+                        <span class="number">+977-01-8212918</span>
+                        <span class="mail">info.support@thedigitalcollege.org</span>
+                    </div>
+                    <ul class="social">
+                        <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
+                        <li><a href="#"><i class="lni-twitter-original"></i></a></li>
+                        <li><a href="#"><i class="lni-instagram-original"></i></a></li>
+                        <li><a href="#"><i class="lni-linkedin-original"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-sm-4">
+                    <div class="footer-link">
+                        <h6 class="footer-title">Company</h6>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div> <!-- footer link -->
+                </div>
+                <div class="col-xl-2 col-lg-3 col-sm-4">
+                    <div class="footer-link">
+                        <h6 class="footer-title">Product & Services</h6>
+                        <ul>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Business</a></li>
+                            <li><a href="#">Developer</a></li>
+                        </ul>
+                    </div> <!-- footer link -->
+                </div>
+                <div class="col-xl-2 col-lg-3 col-sm-4">
+                    <div class="footer-link">
+                        <h6 class="footer-title">Help & Suuport</h6>
+                        <ul>
+                            <li><a href="#">Support Center</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                        </ul>
+                    </div> <!-- footer link -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </div> <!-- footer widget -->
+    
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                 <p>&copy All right reserved</p>
+             </div>
+         </div> <!-- row -->
+     </div> <!-- container -->
+ </div> <!-- footer copyright -->
+</footer>
+
+<!--====== FOOTER PART ENDS ======-->
+
+<!--====== BACK TOP TOP PART START ======-->
+
+<a href="#" class="back-to-top"><i class="lni-chevron-up"></i></a>
+
+<!--====== BACK TOP TOP PART ENDS ======-->   
+
+{% endblock %}

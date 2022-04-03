@@ -1,0 +1,181 @@
+{% extends 'base.html' %} <!-- template inheritance -->
+
+{% block content %}
+{% load static %}
+
+<!-- signup content start -->
+
+<section id="contact" class="contact-area">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="section-title text-center ">
+                    <h4 class="title">The Digital College Registration</h4>
+                    <p class="text"></p>
+                </div> <!-- section title -->
+            </div>
+        </div> <!-- row -->
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="contact mt-30">
+                    <h4 class="contact-title">Contact support</h4>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam unde repellendus delectus facilis quia consequatur maxime perferendis! Sequi, modi consequatur. <br> <br></p>
+                    <ul class="contact-info">
+                        <li><i class="lni-money-location"></i>Kathmandu, Nepal</li>
+                        <li><i class="lni-phone-handset"></i> +977-01-8212918</li>
+                        <li><i class="lni-envelope"></i> info.support@thedigitalcollege.org</li>
+                    </ul>
+                </div> <!-- contact -->
+                <div class="contact mt-30">
+                    <a class="btn btn-primary text-white" data-toggle="modal" data-target="#loginModel">Login</a></li>
+                    
+                </div> <!-- contact -->
+            </div>
+
+            <div class="col-lg-6">
+                <div class="contact-form form-style-one mt-15">
+                    <!-- submission  -->
+
+                    <form id="contact-form" action="" method="post">
+
+                        <div class="form-input mt-15">
+
+
+                            <div class="input-items default">
+                                {{ form.Institution_Name}}
+                                <i class="lni-apartment"></i>
+
+                            </div>
+                        </div> 
+
+
+                        <div class="form-input mt-15">
+
+
+                            <div class="input-items default">
+                                {{ form.Institution_registration_number}}
+                                <i class="lni lni-control-panel"></i>
+                            </div>
+                        </div> 
+                        <!-- Dropdown -->
+                        <div class="container-fluid">
+                            <div class="row">
+                             <div class="col-sm mt-15">
+                                <label>Institute Type</label>
+                                <div class="input-items default ">
+                                    {{ form.Institution_type}}
+
+                                </div>
+                            </div>
+                            <div class="col-sm mt-15">
+                                <label>No of student</label>
+                                <div class="input-items default">
+                                    {{ form.Number_of_student}}
+
+                                </div>
+                            </div>
+                            <div class="col-sm mt-15">
+                                <label>No of employee</label>
+                                <div class="input-items default">
+                                    {{ form.Number_of_employee}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--End Dropdown -->
+                    <div class="form-input mt-15">
+
+
+                        <div class="input-items default">
+                            {{ form.Admin_Name}}
+                            <i class="lni-user"></i>
+                        </div>
+                    </div> 
+                          <div class="form-input mt-15">
+                        <div class="input-items default">
+                           {{ form.Admin_Phone}}
+                           <i class="lni-phone"></i>
+                       </div>
+                   </div>
+
+                    <!-- form input -->
+                    <div class="form-input mt-15">
+                        <div class="input-items default">
+                           {{ form.Admin_Email}}
+                           <i class="lni-book"></i>
+                       </div>
+                   </div> <!-- form input -->
+                
+                   <div class="form-input mt-15">
+
+                    <div class="input-items default">
+                       {{ form.Admin_Password}}
+                       <i class="lni lni-eye"></i>
+                   </div>
+               </div> <!-- form input -->
+
+
+               <div class="form-input mt-15">
+
+
+                <div class="input-items default">
+                   {{ form.conform_password}}
+                   <i class="lni lni-eye"></i>
+               </div>
+           </div> <!-- form input -->
+
+           <div class="form-input mt-15">
+
+            <div class="input-items default">
+                {{ form.Brief_description}}
+                <i class="lni lni-notepad"></i>
+            </div>
+        </div> <!-- form input -->
+        <div class="form-input standard-buttons mt-10">
+            <button class="main-btn standard-two" type="submit">Submit</button>
+        </div> <!-- form input -->
+        {% csrf_token %}
+    </form>
+</div> <!-- contact form -->
+</div>
+</div> <!-- row -->
+
+
+</div> <!-- container -->
+</section>
+
+<!-- Login model bootstrap model -->
+
+<div class="modal fade" id="loginModel" tabindex="-1" role="dialog"  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" >Please enter your login credentials</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+      </button>
+  </div>
+  <form action="/login" method="post">
+
+      <div class="modal-body">
+       
+          <div class="form-group">
+             <label for="user-email" class="col-form-label">Email </label><br>
+             {{ login_form.email}}
+         </div>
+         <div class="form-group">
+           <label for="user-password" class="col-form-label">Password </label><br>
+           {{ login_form.password}}
+       </div>
+       
+   </div>
+   <div class="modal-footer">
+     <button type="submit" class="btn btn-primary">Login</button>
+ </div>
+ {% csrf_token %}
+</form>
+</div>
+</div>
+</div>
+{%endblock%}

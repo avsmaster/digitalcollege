@@ -1,0 +1,290 @@
+{% extends 'dashboard_base.html' %}
+<!-- template inheritance -->
+{% load static %} {%block title%} Administrator {% endblock %} 
+{% block dashboard%}Dashboard{%endblock%}
+<!-- Manage classes -->
+{% block panda%}
+<li class="nav-item">
+  <div class="btn-group">
+    <button
+      type="button"
+      class="btn btn-outline-primary mt-2 dropdown-toggle"
+      data-toggle="dropdown"
+    >
+      Panda
+    </button>
+
+    <!-- dropdownclass -->
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Level6</a>
+      <a class="dropdown-item" href="#">Level5</a>
+
+      <a class="dropdown-item" href="#">Level4</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Level3</a>
+    </div>
+  </div>
+</li>
+{%endblock%}
+<!-- Manage library -->
+{% block library%}
+
+<li class="nav-item">
+  <div class="btn-group">
+    <button
+      type="button"
+      class="btn btn-outline-primary mt-2 dropdown-toggle"
+      data-toggle="dropdown"
+    >
+      Library
+    </button>
+
+    <!-- dropdownclass -->
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">section</a>
+      <a class="dropdown-item" href="#">section</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">section</a>
+      <a class="dropdown-item" href="#">section</a>
+    </div>
+  </div>
+  <!-- end of button group -->
+</li>
+{%endblock%}
+
+<!-- Manage pari -->
+
+{% block pari %}
+<li class="nav-item">
+  <!-- **********Pari******** -->
+  <div class="btn-group">
+    <button
+      type="button"
+      class="btn btn-outline-primary mt-2 dropdown-toggle"
+      data-toggle="dropdown"
+    >
+      Pari
+    </button>
+
+    <!-- dropdownclass -->
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">section</a>
+      <a class="dropdown-item" href="#">section</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">section</a>
+      <a class="dropdown-item" href="#">section</a>
+    </div>
+  </div>
+  <!-- end of button group -->
+</li>
+{% endblock %}
+
+<!-- Add component  -->
+{% block addCOntent%}
+
+<button
+  type="button"
+  class="btn btn-outline-primary mt-3"
+  data-toggle="modal"
+  data-target="#thedigitalcollege_add_component"
+  style="
+    width: 30px;
+    height: 30px;
+    padding: 7px 10px;
+    border-radius: 50%;
+    font-size: 10px;
+    text-align: center;
+  "
+>
+  <i class="fa fa-plus" aria-hidden="true"></i>
+</button>
+
+{% endblock%}
+
+<!-- ********************Admin Profile********** -->
+{%block profile%}
+<li class="list-group-item justify-content-between">Profile pic</li>
+
+<li class="list-group-item justify-content-between">User Name</li>
+
+{% endblock %}
+
+<!-- ********************endAdmin Profile********** -->
+
+{% block component %} {% endblock%}
+
+<!-- start Adding different Card views  -->
+{% block cards_view%}
+<!--Grid row-->
+<div class="row wow fadeIn">
+  <!--Grid column-->
+  <div class="col-lg-4 col-md-6 mb-4">
+    <!--Card-->
+    <div class="card">
+      <!-- Card header -->
+      <div class="card-header">Students</div>
+
+      <!--Card content-->
+      <div class="card-body"></div>
+    </div>
+    <!--/.Card-->
+  </div>
+  <!--Grid column-->
+
+  <!--Grid column-->
+  <div class="col-lg-4 col-md-6 mb-4">
+    <!--Card-->
+    <div class="card">
+      <!-- Card header -->
+      <div class="card-header">Groups</div>
+
+      <!--Card content-->
+      <div class="card-body"></div>
+    </div>
+    <!--/.Card-->
+  </div>
+  <!--Grid column-->
+
+  <div class="col-lg-4 col-md-6 mb-4">
+    <!--Card-->
+    <div class="card">
+      <!-- Card header -->
+      <div class="card-header">Module</div>
+
+      <!--Card content-->
+      <div class="card-body"></div>
+    </div>
+    <!--/.Card-->
+  </div>
+  <!--Grid column-->
+
+
+
+  <!--Grid column-->
+  <div class="col-lg-4 col-md-6 mb-4">
+    <!--Card-->
+    <div class="card">
+      <!-- Card header -->
+      <div class="card-header">Bandwidth</div>
+
+      <!--Card content-->
+      <div class="card-body"></div>
+    </div>
+    <!--/.Card-->
+  </div>
+  <!--Grid column-->
+
+  <!--Grid column-->
+  <div class="col-lg-4 col-md-6 mb-4">
+    <!--Card-->
+    <div class="card">
+      <!-- Card header -->
+      <div class="card-header">Components</div>
+
+      <!--Card content-->
+      <div class="card-body"></div>
+    </div>
+    <!--/.Card-->
+  </div>
+  <!--Grid column-->
+
+  <div class="col-lg-4 col-md-6 mb-4">
+    <!--Card-->
+    <div class="card">
+      <!-- Card header -->
+      <div class="card-header">Teacher</div>
+
+      <!--Card content-->
+      <div class="card-body"></div>
+    </div>
+    <!--/.Card-->
+  </div>
+  <!--Grid column-->
+</div>
+<!--Grid row-->
+
+<!--Grid row-->
+<div class="row wow fadeIn">
+  <!--Grid column-->
+  <div class="col-md-9 mb-4">
+    <!--Card-->
+    <div class="card">
+      <div class="card-header">Graph</div>
+      <!--Card content-->
+      <div class="card-body">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+        qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </div>
+    </div>
+    <!--/.Card-->
+  </div>
+  <!--Grid column-->
+
+  <!--Grid column-->
+  <div class="col-md-3 mb-4">
+    <!--Card-->
+    <div class="card mb-4">
+      <div class="card-header">Notifications</div>
+      <!--Card content-->
+      <div class="card-body">
+        <!-- List group links -->
+        <div class="list-group list-group-flush">
+          <a class="list-group-item list-group-item-action waves-effect"
+            >students
+            <!--  <span class="badge badge-success badge-pill pull-right">22                
+                  </span> -->
+          </a>
+          <a class="list-group-item list-group-item-action waves-effect"
+            >Traffic
+            <!--     <span class="badge badge-primary badge-pill pull-right">8</span> -->
+          </a>
+          <a class="list-group-item list-group-item-action waves-effect"
+            >Teachers
+            <!--  <span class="badge badge-primary badge-pill pull-right">14</span> -->
+          </a>
+          <a class="list-group-item list-group-item-action waves-effect"
+            >Messages
+            <!--  <span class="badge badge-primary badge-pill pull-right">123</span> -->
+          </a>
+          <a class="list-group-item list-group-item-action waves-effect"
+            >Platform Issues
+
+            <!-- <span class="badge badge-danger badge-pill pull-right">5
+                  </span> -->
+          </a>
+        </div>
+        <!-- List group links -->
+      </div>
+    </div>
+    <!--/.Card-->
+  </div>
+  <!--Grid column-->
+</div>
+<!--Grid row-->
+
+{% endblock cards_view%}
+<!-- Adding different Card views  -->
